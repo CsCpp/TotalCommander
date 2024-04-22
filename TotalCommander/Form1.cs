@@ -23,10 +23,10 @@ namespace TotalCommander
             InitializeComponent();
         }
 
-    
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text=="") textBox1.Text = "C:\\";
+            if (textBox1.Text == "") textBox1.Text = "C:\\";
             AddAdress();
         }
 
@@ -39,7 +39,11 @@ namespace TotalCommander
             }
         }
 
-
-
+        private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (textBox1.Text == "") textBox1.Text = "C:\\";
+            textBox1.Text=Path.Combine(textBox1.Text ,listBox1.SelectedItem.ToString());
+            AddAdress();
+        }
     }
 }
