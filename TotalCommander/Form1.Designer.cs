@@ -31,22 +31,25 @@
             listBox1 = new ListBox();
             textBox1 = new TextBox();
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // listBox1
             // 
+            listBox1.Font = new Font("Segoe UI", 10F);
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(22, 94);
+            listBox1.ItemHeight = 23;
+            listBox1.Location = new Point(22, 74);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(766, 344);
+            listBox1.Size = new Size(766, 349);
             listBox1.TabIndex = 0;
             listBox1.MouseDoubleClick += listBox1_MouseDoubleClick;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(22, 25);
+            textBox1.Location = new Point(112, 25);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(632, 27);
+            textBox1.Size = new Size(565, 27);
             textBox1.TabIndex = 1;
             textBox1.Text = "C:\\";
             textBox1.KeyDown += textBox1_KeyDown;
@@ -61,11 +64,22 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(12, 25);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 3;
+            button2.Text = "НАЗАД";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(listBox1);
@@ -80,5 +94,6 @@
         private ListBox listBox1;
         private TextBox textBox1;
         private Button button1;
+        private Button button2;
     }
 }
