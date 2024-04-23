@@ -64,7 +64,17 @@ namespace TotalCommander
             {
                 string str;
                 str = Path.Combine(textBox1.Text, listBox1.SelectedItem.ToString());
-                Process.Start(str);
+
+                try
+                {
+                    Process.Start(str);
+                }
+                catch (Exception)
+                {
+
+                    
+                }
+                   
             }
           
 
